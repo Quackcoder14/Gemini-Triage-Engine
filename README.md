@@ -76,7 +76,7 @@ Set the variable in your current shell session **before** running the script:
 Run the main Python script directly from your terminal:
 
 `bash
-python final_agent_system.py`
+python google_agent.py`
 
 You will be presented with the main execution menu:
 
