@@ -1,0 +1,17 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.so
+
+# Environments
+.venv/
+env/
+.env
+
+# Jupyter Notebook files
+.ipynb_checkpoints
+
+# IDE files (VS Code)
+.vscode/*
+!*.vscode/settings.json # Optional: Keep specific config if needed
