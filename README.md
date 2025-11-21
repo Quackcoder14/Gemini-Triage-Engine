@@ -1,9 +1,7 @@
 # Gemini-Triage-Engine
 A proof-of-concept repository for building robust, multi-stage LLM applications. Features a triage agent acting as a central dispatcher for routing requests to specialized handlers or escalating to human intervention.
 
-# 🤖 A2A-Support-Engine
-
-## Agent-to-Agent (A2A) Customer Support Dispatcher
+## 🤖 Agent-to-Agent (A2A) Customer Support Dispatcher
 
 This project implements a robust, multi-agent conversational system using the **Google Gemini API** that demonstrates the **Agent-to-Agent (A2A) orchestration pattern** for enterprise customer support. The system uses a specialized **Triage Agent** to route requests and a **Knowledge Agent** to execute tools and deliver final, grounded answers.
 
@@ -16,17 +14,12 @@ The architecture ensures that complex or sensitive queries are immediately flagg
 The system operates based on a clear, sequential A2A protocol:
 
 1.  **Triage Agent (Dispatcher):** Analyzes the user query and the entire session history. Its sole output is a routing decision:
-    * `ESCALATION_REQUIRED` (for sensitive issues like refunds/managers).
+    * `ESCALATION_REQUIRED` (for sensitive issues like refunds or manager requests).
     * `Knowledge Agent` (for technical or general questions resolvable by tools).
 2.  **Knowledge Agent (Executor):** Takes over if routed. It is configured with tools and system instructions to:
     * Use the **Custom Tool** (`get_product_info`) for internal knowledge retrieval.
     * Use the **Built-in Google Search Tool** for real-time external information.
     * Synthesize the tool outputs into a final, comprehensive, and friendly customer response.
-
-
-
-[Image of A2A Multi-Agent System architecture diagram for support]
-
 
 ---
 
@@ -52,8 +45,8 @@ The system operates based on a clear, sequential A2A protocol:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/YourUsername/A2A-Support-Engine.git](https://github.com/YourUsername/A2A-Support-Engine.git)
-    cd A2A-Support-Engine
+    git clone [https://github.com/Quackcoder14/Gemini-Triage-Engine.git](https://github.com/Quackcoder14/Gemini-Triage-Engine.git)
+    cd Gemini-Triage-Engine
     ```
 
 2.  **Install dependencies:** The project requires the official Gemini SDK and its underlying libraries.
@@ -65,16 +58,16 @@ The system operates based on a clear, sequential A2A protocol:
 
 The project reads the API key securely from an environment variable named `GOOGLE_API_KEY`.
 
-#### If using GitHub Codespaces (Recommended Secure Method):
+#### Recommended: Using GitHub Codespaces Secrets
 1.  Go to your GitHub repository **Settings** $\to$ **Secrets and variables** $\to$ **Codespaces**.
-2.  Add a new secret named `GOOGLE_API_KEY` and paste your key as the value.
+2.  Add a new repository secret named `GOOGLE_API_KEY` and paste your key as the value.
 3.  **Restart your Codespace** to load the new secret.
 
-#### If running locally (e.g., in Windows/Linux Terminal):
+#### Alternative: Local Terminal
 Set the variable in your current shell session **before** running the script:
 
-* **Linux/macOS:** `export GOOGLE_API_KEY='YOUR_KEY'`
-* **Windows (CMD):** `set GOOGLE_API_KEY=YOUR_KEY`
+* **Linux/macOS:** `export GOOGLE_API_KEY='YOUR_KEY_HERE'`
+* **Windows (CMD):** `set GOOGLE_API_KEY=YOUR_KEY_HERE`
 
 ---
 
