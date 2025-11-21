@@ -1,7 +1,7 @@
 # Gemini-Triage-Engine
 A proof-of-concept repository for building robust, multi-stage LLM applications. Features a triage agent acting as a central dispatcher for routing requests to specialized handlers or escalating to human intervention.
 
-## 🤖 Agent-to-Agent (A2A) Customer Support Dispatcher
+## Agent-to-Agent (A2A) Customer Support Dispatcher
 
 This project implements a robust, multi-agent conversational system using the **Google Gemini API** that demonstrates the **Agent-to-Agent (A2A) orchestration pattern** for enterprise customer support. The system uses a specialized **Triage Agent** to route requests and a **Knowledge Agent** to execute tools and deliver final, grounded answers.
 
@@ -9,7 +9,7 @@ The architecture ensures that complex or sensitive queries are immediately flagg
 
 ---
 
-## ✨ Architecture and Workflow
+## Architecture and Workflow
 
 The system operates based on a clear, sequential A2A protocol:
 
@@ -23,7 +23,7 @@ The system operates based on a clear, sequential A2A protocol:
 
 ---
 
-## ⚙️ Key Features
+## Key Features
 
 * **A2A Orchestration:** Decoupled Triage/Routing from Execution/Answering for modularity and control.
 * **Intelligent Routing:** Directs sensitive queries to human agents immediately.
@@ -34,7 +34,7 @@ The system operates based on a clear, sequential A2A protocol:
 
 ---
 
-## 🛠️ Setup and Installation
+## Setup and Installation
 
 ### Prerequisites
 
@@ -54,7 +54,7 @@ The system operates based on a clear, sequential A2A protocol:
     pip install -r requirements.txt
     ```
 
-### 🔐 Configuration: Setting the API Key (Crucial Step)
+### Configuration: Setting the API Key (Crucial Step)
 
 The project reads the API key securely from an environment variable named `GOOGLE_API_KEY`.
 
@@ -71,7 +71,7 @@ Set the variable in your current shell session **before** running the script:
 
 ---
 
-## 🏃 Usage
+## Usage
 
 Run the main Python script directly from your terminal:
 
